@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import mr.kostua.youstillhavetimeto.databinding.AgeFragmentBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class AgeFragment : Fragment() {
     private val mViewModel by viewModel<AgeViewModel>()
 
