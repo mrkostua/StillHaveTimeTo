@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import mr.kostua.youstillhavetimeto.databinding.AgeFragmentBinding
+import mr.kostua.youstillhavetimeto.util.event.observeEvent
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AgeFragment : Fragment() {
@@ -15,10 +16,23 @@ class AgeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val biniding = AgeFragmentBinding.inflate(inflater, container, false).apply {
+        val binding = AgeFragmentBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = mViewModel
         }
-        return biniding.root
+        initObservers()
+
+        return binding.root
     }
+
+    private fun initObservers() {
+        mViewModel.apply {
+            observeEvent(event, ::handleEvents)
+        }
+    }
+
+    private fun handleEvents(event: AgeEvents?) {
+
+    }
+
 }

@@ -1,9 +1,9 @@
 package mr.kostua.youstillhavetimeto.ui.start.age
 
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import mr.kostua.youstillhavetimeto.util.BaseViewModel
 
-class AgeViewModel : ViewModel() {
+class AgeViewModel : BaseViewModel<AgeEvents>() {
     val name = MutableLiveData<String>()
 
     init {
