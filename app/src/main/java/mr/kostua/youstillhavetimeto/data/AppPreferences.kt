@@ -21,5 +21,4 @@ class AppPreferences(val context: Context) {
             it[USE_AGE_KEY] = age
         }
     }
-
 }
