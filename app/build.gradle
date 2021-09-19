@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 def versionMajor = 1
@@ -57,6 +58,9 @@ ext {
     navigation_component_version = '2.3.5'
     androidMaterial_version = '1.4.0'
     data_store_preferences_version = '1.0.0'
+    rxjava_version = "3.0.4"
+    rxandroid_version = "3.0.0"
+    rxkotlin_version = "3.0.0"
 
     mockito_version = '3.7.7'
     junit_version = '4.13.2'
@@ -102,6 +106,11 @@ dependencies {
 
     //timber logging
     implementation "com.jakewharton.timber:timber:$timberLogger_version"
+
+    //Rx
+    implementation "io.reactivex.rxjava3:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxkotlin_version"
 
     //endregion
 
